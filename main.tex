@@ -1,0 +1,60 @@
+\documentclass{article}
+
+\title{TTM3 Smart Heating System Report}
+\author{Xiao Chen, xiaoch@stud.ntnu.no\\
+Pavel Arteev, pavela@stud.ntnu.no}
+\date{October 2013}
+
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{biblatex}
+\addbibresource{references.bib}
+\usepackage{amsmath} 
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\par By the magnificent growth of using technology in the daily life, the concept of the smart housing system is raised these years. Since smart cell phone and other daily using device have more and more functions  than its original function, the self-adaptive system is necessary service to control and manage other devices in the house.
+
+\par Self-adaptive system in this report will be also dynamic component system. It is the system emphasis on context constraints that govern how components may be composed (without prescribing a particular structure), and compositional adaptation is bounded by the components.
+
+\par The project of this report will be implemented in OSGi\cite{osgi} framework. Since this project would demonstrate a dynamic component system scoped in smart heating system in the house, OSGi framework is a good choice here. The OSGi framework is a module system and service platform for the Java programming language that implements a complete and dynamic component model, something that does not exist in standalone Java/VM environments. Applications or components (coming in the form of bundles for deployment) can be remotely installed, started, stopped, updated, and uninstalled without requiring a reboot; management of Java packages/classes is specified in great detail. Application life cycle management (start, stop, install, etc.) is done via APIs that allow for remote downloading of management policies. The service registry allows bundles to detect the addition of new services, or the removal of services, and adapt accordingly.
+
+\par There are several benefits point for OSGi framework using for Java project, since it improves some not advanced part of the Java programming language in self-adaptive system.
+\par For Development time benefits\cite{osgi_benefit}:
+\begin{itemize}
+  	\item Strict development time (and runtime) enforcement of module boundaries
+	\item A service-oriented architecture that works for managing service dependencies between modules.
+	\item Better ability to structure development teams the way you want to
+	\item Faster team-based development
+	\item Faster testing cycles
+	\item Support for versioning as part of dependency management
+	\item Less road-blocks
+  \end{itemize}
+  
+\par For Runtime benefits:
+\begin{itemize}
+	\item Full information about the installed modules and their wiring is available at runtime - a level of insight operations teams have never had before.
+	\item Isolate changes
+	\item Share dependencies
+	\item Use just the server facilities you need
+\end{itemize}
+
+\par However when we first time used OSGi framework, it is not so easy to use in this project which we will discuss in the conclusion section of this report for some feedback points.
+
+\include{system_design}
+
+\include{related_work}
+
+\include{conclusion}
+
+\printbibliography
+
+\end{document}
