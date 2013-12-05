@@ -32,6 +32,12 @@ The developer of the Ninja Sphere has released the supported devices for the sys
 
 \par For Ninja Sphere system, the user can user their smart phone or wearable smart device (like Google Glass or smart watch) to control and get notification from other daily using devices in the house. For example, user Adam left home and forget to turn off the heater, then the Ninja Sphere system will make the decision send the notification to Adam's smart device to ask user if they forgot to turn off the heater. Once Adam think he forgot to turn off the heater, then he can use the smart device to send turn off command to the system, after that the system will send the command to turn off the running heater in the house. And in current project of this report, the user case is almost the same except the notification and cooperate with smart device function is not implemented in current phase.
 \par In the system of this report, the system has some configuration value from the user which can be changed by the user as well, then the other 'dump' component in the system will do the self-adaptive process when they reach the certain threshold value. The basic concept is the same as Ninja Sphere system.
+\begin{figure}
+	\centering    	
+\includegraphics[width=0.90\textwidth,natwidth=610,natheight=642]{figs/hyttami_system.png}
+  	\caption{HyttaMi System Architecture}
+  	\label{fig:hyttami_system}
+\end{figure}
 
 \subsection{HyttaMi}
 
@@ -46,13 +52,6 @@ The developer of the Ninja Sphere has released the supported devices for the sys
 	\item Turn on or off the heat using a normal phone
 \end{itemize}
 \par According to the system architecture in Figure \ref{fig:hyttami_system}, the working process is also a self-adaptive and user controlling system. Although HyttaMi provides more services than heating control system, other services compare to heating control system has the same basic working logic which is also the same as the prototype system in this report.
-
-\begin{figure}
-	\centering    	
-\includegraphics[width=0.90\textwidth,natwidth=610,natheight=642]{figs/hyttami_system.png}
-  	\caption{HyttaMi System Architecture}
-  	\label{fig:hyttami_system}
-\end{figure}
 
 \par The normal user case of HyttaMi could be like, user Eva wants to go to her cabin this weekend, but she still needs to work in the weekday, so originally there is no way for her to make the heating system working in her cabin unless she goes there. But now by using Hyttami, she can just use her phone to send some sms message to the correct number, then the system will turn on the heating system and wait her coming to enjoy the cabin weekend. This working process is also implement in the system of this report. Once user binds the heater device and temperature sensor together, it initially start the heating logic, then the temperature sensor would send current temperature value to the control component, according to certain threshold user set before, the heating would be working to reach the temperature threshold. Moreover since the heater binder, heater device and temperature sensor are not communicate directly, they all communicate with the Hydna service, then each bundle can be initiated and allocated resources in different places. So the remote control process is also possible in the current prototype system.
 
