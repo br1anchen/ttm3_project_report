@@ -30,8 +30,8 @@
 %% bibliography reference
 %% \cite{xxx}
 
-\par At the design and preparation stage for this project, there is an important feature should be taken account when development, which is this self-adaptive system need to be easy to modified for other services in the smart house scope. After that, we decide to make this project working for big range of different services in the smart house scope by making the complicated central management and easy client devices architecture. The main architecture of the system is shown in Figure \ref{fig:system_architecture}.
-
+\par At the design and preparation stage one important thing should be taken into an account. System need to be highly flexible and able to dynamically adapt to changing requirements. Self-adaptive system was taken as a base. After that, we decide to make this project working for big range of different services in the smart house scope by making the complicated central management and easy client devices architecture. The main architecture of the system is shown in Figure \ref{fig:system_architecture}.
+Sources for the project can be found in the internet by the address %%https://github.com/pavelArteev/ttm3_osgi_smartHouse.git.
 \begin{figure}
 	\centering    	
 \includegraphics[width=0.90\textwidth,natwidth=610,natheight=642]{figs/system_architecture.png}
@@ -106,12 +106,7 @@
 					}
 				}
 			}else if(msgType.equals(Heater.CLIENT_MESSAGE)){
-				//System.out.println(Heater.CLIENT_MESSAGE 
-							+"(Heater Simulator)" +"-> " 
-							+msgType+":"
-							+msgSrc+":"
-							+msgDst+":"
-							+msgCmd);
+				// Ignore this
 			}
 		}
 		
